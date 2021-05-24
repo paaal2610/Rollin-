@@ -71,7 +71,7 @@ class _selectionpageState extends State<selectionpage> {
                           children: [
                             AnimatedContainer(
                               color: _color1,
-                              duration: Duration(seconds: 1),
+                              duration: Duration(microseconds: 500),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -109,7 +109,7 @@ class _selectionpageState extends State<selectionpage> {
                           children: [
                             AnimatedContainer(
                               color: _color2,
-                              duration: Duration(seconds: 1),
+                              duration: Duration(microseconds: 500),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -145,7 +145,7 @@ class _selectionpageState extends State<selectionpage> {
                           children: [
                             AnimatedContainer(
                               color: _color3,
-                              duration: Duration(seconds: 1),
+                              duration: Duration(microseconds: 500),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -190,7 +190,7 @@ class _selectionpageState extends State<selectionpage> {
                           children: [
                             AnimatedContainer(
                               color: _color4,
-                              duration: Duration(seconds: 1),
+                              duration: Duration(microseconds: 500),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -226,7 +226,7 @@ class _selectionpageState extends State<selectionpage> {
                           children: [
                             AnimatedContainer(
                               color: _color5,
-                              duration: Duration(seconds: 1),
+                              duration: Duration(microseconds: 500),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -262,7 +262,7 @@ class _selectionpageState extends State<selectionpage> {
                           children: [
                             AnimatedContainer(
                               color: _color6,
-                              duration: Duration(seconds: 1),
+                              duration: Duration(microseconds: 500),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -326,8 +326,8 @@ class _selectionpageState extends State<selectionpage> {
                           print('Please Select both characters');
                         } else {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => DemoScreen(
-                                  c1: P1character, c2: P2character)));
+                              builder: (context) =>
+                                  DicePage(c1: P1character, c2: P2character)));
                         }
                       },
                       backgroundColor: Colors.green[400],

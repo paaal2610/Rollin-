@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class DicePage extends StatelessWidget {
+  var c1, c2;
+  DicePage({this.c1, this.c2});
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
@@ -43,6 +46,10 @@ class _ScreenState extends State<Screen> {
       });
     }
 
+    var screenSize = MediaQuery.of(context).size;
+    var width = screenSize.width;
+    var height = screenSize.height;
+
     return SafeArea(
       child: Center(
         child: Stack(
@@ -75,10 +82,16 @@ class _ScreenState extends State<Screen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 20),
+                                margin: EdgeInsets.only(top: height * 0.1),
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 10, horizontal: 10),
-                                child: Text('  Player 1  '),
+                                    vertical: height * 0.02,
+                                    horizontal: width * 0.04),
+                                child: Text(
+                                  '  Player 1  ',
+                                  style: TextStyle(
+                                      decoration: TextDecoration.none,
+                                      fontSize: height * 0.05),
+                                ),
                                 decoration: BoxDecoration(
                                   shape: BoxShape.rectangle,
                                   borderRadius:
@@ -99,14 +112,34 @@ class _ScreenState extends State<Screen> {
                               Container(
                                 padding: EdgeInsets.symmetric(
                                     vertical: 20, horizontal: 20),
-                                child: Text('$player1score'),
+                                child: Text(
+                                  '$player1score',
+                                  style: TextStyle(
+                                    fontSize: height * 0.05,
+                                    decoration: TextDecoration.none,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
                           Container(
                             padding: EdgeInsets.symmetric(
                                 vertical: 20, horizontal: 20),
-                            child: player1 ? Text('$dicenumber') : Text('--'),
+                            child: player1
+                                ? Text(
+                                    '$dicenumber',
+                                    style: TextStyle(
+                                      fontSize: height * 0.05,
+                                      decoration: TextDecoration.none,
+                                    ),
+                                  )
+                                : Text(
+                                    '--',
+                                    style: TextStyle(
+                                      fontSize: height * 0.05,
+                                      decoration: TextDecoration.none,
+                                    ),
+                                  ),
                           ),
                         ],
                       ),
@@ -134,10 +167,17 @@ class _ScreenState extends State<Screen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 20),
+                                margin: EdgeInsets.only(top: height * 0.1),
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 10, horizontal: 10),
-                                child: Text('Player 2'),
+                                    vertical: height * 0.02,
+                                    horizontal: width * 0.04),
+                                child: Text(
+                                  ' Player 2 ',
+                                  style: TextStyle(
+                                    fontSize: height * 0.05,
+                                    decoration: TextDecoration.none,
+                                  ),
+                                ),
                                 decoration: BoxDecoration(
                                   shape: BoxShape.rectangle,
                                   borderRadius:
@@ -158,14 +198,34 @@ class _ScreenState extends State<Screen> {
                               Container(
                                 padding: EdgeInsets.symmetric(
                                     vertical: 20, horizontal: 20),
-                                child: Text('$player2score'),
+                                child: Text(
+                                  '$player2score',
+                                  style: TextStyle(
+                                    fontSize: height * 0.05,
+                                    decoration: TextDecoration.none,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
                           Container(
                             padding: EdgeInsets.symmetric(
                                 vertical: 20, horizontal: 20),
-                            child: !player1 ? Text('$dicenumber') : Text('--'),
+                            child: !player1
+                                ? Text(
+                                    '$dicenumber',
+                                    style: TextStyle(
+                                      fontSize: height * 0.05,
+                                      decoration: TextDecoration.none,
+                                    ),
+                                  )
+                                : Text(
+                                    '--',
+                                    style: TextStyle(
+                                      fontSize: height * 0.05,
+                                      decoration: TextDecoration.none,
+                                    ),
+                                  ),
                           ),
                         ],
                       ),
@@ -218,4 +278,16 @@ class _ScreenState extends State<Screen> {
       ),
     );
   }
+}
+
+Size screenSize(BuildContext context) {
+  return MediaQuery.of(context).size;
+}
+
+double screenHeight(BuildContext context, {double dividedBy = 1}) {
+  return screenSize(context).height / dividedBy;
+}
+
+double screenWidth(BuildContext context, {double dividedBy = 1}) {
+  return screenSize(context).width / dividedBy;
 }
