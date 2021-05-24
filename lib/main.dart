@@ -24,6 +24,14 @@ class selectionpage extends StatefulWidget {
 class _selectionpageState extends State<selectionpage> {
   int P1character = 0;
   int P2character = 0;
+  String _Player1 = " ";
+  String _Player2 = " ";
+  var _color1 = Colors.transparent;
+  var _color2 = Colors.transparent;
+  var _color3 = Colors.transparent;
+  var _color4 = Colors.transparent;
+  var _color5 = Colors.transparent;
+  var _color6 = Colors.transparent;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +76,9 @@ class _selectionpageState extends State<selectionpage> {
                       children: [
                         Column(
                           children: [
-                            Container(
+                            AnimatedContainer(
+                              color: _color1,
+                              duration: Duration(seconds: 1),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -76,11 +86,20 @@ class _selectionpageState extends State<selectionpage> {
                                 onPressed: () {
                                   if (P1character == 0 && P2character == 0) {
                                     P1character = 1;
+
+                                    setState(() {
+                                      _color1 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       P2character == 0) {
                                     P2character = 1;
+
+                                    setState(() {
+                                      _color1 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       !(P2character == 0)) {}
+
                                   print("$P1character  $P2character");
                                 },
                                 child: Image(
@@ -93,7 +112,9 @@ class _selectionpageState extends State<selectionpage> {
                         ),
                         Column(
                           children: [
-                            Container(
+                            AnimatedContainer(
+                              color: _color2,
+                              duration: Duration(seconds: 1),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -101,13 +122,21 @@ class _selectionpageState extends State<selectionpage> {
                                 onPressed: () {
                                   if (P1character == 0 && P2character == 0) {
                                     P1character = 2;
+
+                                    setState(() {
+                                      _color2 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       P2character == 0) {
                                     P2character = 2;
+
+                                    setState(() {
+                                      _color2 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
-                                      !(P2character == 0)) {
-                                    print("$P1character  $P2character");
-                                  }
+                                      !(P2character == 0)) {}
+
+                                  print("$P1character  $P2character");
                                 },
                                 child: Image(
                                   image: AssetImage('images/Chandler.png'),
@@ -119,7 +148,9 @@ class _selectionpageState extends State<selectionpage> {
                         ),
                         Column(
                           children: [
-                            Container(
+                            AnimatedContainer(
+                              color: _color3,
+                              duration: Duration(seconds: 1),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -127,9 +158,17 @@ class _selectionpageState extends State<selectionpage> {
                                 onPressed: () {
                                   if (P1character == 0 && P2character == 0) {
                                     P1character = 3;
+
+                                    setState(() {
+                                      _color3 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       P2character == 0) {
                                     P2character = 3;
+
+                                    setState(() {
+                                      _color3 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       !(P2character == 0)) {}
 
@@ -154,7 +193,9 @@ class _selectionpageState extends State<selectionpage> {
                       children: [
                         Column(
                           children: [
-                            Container(
+                            AnimatedContainer(
+                              color: _color4,
+                              duration: Duration(seconds: 1),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -162,11 +203,20 @@ class _selectionpageState extends State<selectionpage> {
                                 onPressed: () {
                                   if (P1character == 0 && P2character == 0) {
                                     P1character = 4;
+
+                                    setState(() {
+                                      _color4 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       P2character == 0) {
                                     P2character = 4;
+
+                                    setState(() {
+                                      _color4 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       !(P2character == 0)) {}
+
                                   print("$P1character  $P2character");
                                 },
                                 child: Image(
@@ -179,7 +229,9 @@ class _selectionpageState extends State<selectionpage> {
                         ),
                         Column(
                           children: [
-                            Container(
+                            AnimatedContainer(
+                              color: _color5,
+                              duration: Duration(seconds: 1),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -187,13 +239,21 @@ class _selectionpageState extends State<selectionpage> {
                                 onPressed: () {
                                   if (P1character == 0 && P2character == 0) {
                                     P1character = 5;
+
+                                    setState(() {
+                                      _color5 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       P2character == 0) {
                                     P2character = 5;
+
+                                    setState(() {
+                                      _color5 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
-                                      !(P2character == 0)) {
-                                    print("$P1character  $P2character");
-                                  }
+                                      !(P2character == 0)) {}
+
+                                  print("$P1character  $P2character");
                                 },
                                 child: Image(
                                   image: AssetImage('images/Rachel.png'),
@@ -205,7 +265,9 @@ class _selectionpageState extends State<selectionpage> {
                         ),
                         Column(
                           children: [
-                            Container(
+                            AnimatedContainer(
+                              color: _color6,
+                              duration: Duration(seconds: 1),
                               padding: EdgeInsets.all(5),
                               height: screenHeight(context, dividedBy: 4),
                               width: screenWidth(context, dividedBy: 3.25),
@@ -213,9 +275,17 @@ class _selectionpageState extends State<selectionpage> {
                                 onPressed: () {
                                   if (P1character == 0 && P2character == 0) {
                                     P1character = 6;
+
+                                    setState(() {
+                                      _color6 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       P2character == 0) {
                                     P2character = 6;
+
+                                    setState(() {
+                                      _color6 = Colors.green[400];
+                                    });
                                   } else if (!(P1character == 0) &&
                                       !(P2character == 0)) {}
 
