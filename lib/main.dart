@@ -54,7 +54,7 @@ class _selectionpageState extends State<selectionpage> {
                   shape: BoxShape.rectangle,
                   borderRadius:
                       const BorderRadius.all(const Radius.circular(40)),
-                  color: Colors.purple[400],
+                  color: Colors.green[400],
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
